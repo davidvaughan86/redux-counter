@@ -1,9 +1,12 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import ThirdComponent from './ThirdComponent'
+
+
+
 export default function ReduxCounter () {
 
-    const dispatch=useDispatch()
+    const dispatch = useDispatch()
     const count = useSelector(state => state.count)
 
 
@@ -12,8 +15,8 @@ export default function ReduxCounter () {
         <div>
             <h1>counter</h1>
             <p>Count:{count}</p>
-            <button OnClick={() => dispatch({type: 'INCREMENT'})}>INCREMENT</button>  
-            <button OnClick={() => dispatch({type: 'DECREMENT'})}>DECREMENT</button>
+            <button onClick={() => dispatch({type: 'INCREMENT'})}>INCREMENT</button>  
+            <button onClick={() => dispatch({type: 'DECREMENT'})}>DECREMENT</button>
 
 
             <ThirdComponent />

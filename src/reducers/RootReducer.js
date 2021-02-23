@@ -7,7 +7,7 @@ const initialState = {
 }
 
 
-export default function RootReducer(state=initialState, action) { // declaring the function and using state=object. object will cotain the initial values. Action as the second argument.
+const RootReducer =(state=initialState, action) => { // declaring the function and using state=object. object will cotain the initial values. Action as the second argument.
     switch(action.type) { // switch (action dot type) function
         case actionTypes.INCREMENT: // actions are allCaps end with colon
             return {count: state.count +1} // return ACTION'S action
@@ -17,3 +17,5 @@ export default function RootReducer(state=initialState, action) { // declaring t
             return state
     }
 }
+
+export default RootReducer
